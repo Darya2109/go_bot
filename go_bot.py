@@ -69,8 +69,9 @@ def tag_all_users(message):
     mention_all_users(message.chat.id)
 
 
+# обращение к файлу со списком участников
 def mention_all_users(chat_id):
-    users_file = 'users.csv' #обращение к файлу со списком участников
+    users_file = 'users.csv'
     if not os.path.exists(users_file):
         bot.send_message(chat_id, "Файл users.csv не найден.")
         return
